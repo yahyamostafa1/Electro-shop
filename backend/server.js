@@ -22,9 +22,9 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
-app.use(['/api/products', '/products'], productRoutes);
-app.use(['/api/users', '/users'], authRoutes);
-app.use(['/api/orders', '/orders'], orderRoutes);
+app.use('/api/products', productRoutes);
+app.use('/api/users', authRoutes);
+app.use('/api/orders', orderRoutes);
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
